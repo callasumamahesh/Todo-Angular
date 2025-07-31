@@ -31,22 +31,21 @@ export class App {
 
   SubmitData(){
     this.validation = {taskValidation:false, selectValidation: false}
-    if(!this.taskName){
+    if(!this.taskName || !this.taskName.trim()){
       this.validation.taskValidation = true
     }
     if(!this.taskProgress){
       this.validation.selectValidation = true
     }
-    if(this.taskName && this.taskProgress){
-      this.todoData = [...this.todoData, {taskName : this.taskName, taskProgress:this.taskProgress}]
+    if(this.taskName.trim() && this.taskProgress){
+      this.todoData = [...this.todoData, {taskName : this.taskName.trim(), taskProgress:this.taskProgress}]
       localStorage.setItem('todoData', JSON.stringify(this.todoData))
       this.taskName = '',
       this.taskProgress = ''
     }
-    console.log(this.todoData, 'this is todo data')
   }
   EditTodoData(data:any){
-    console.log(data ,'This is from parent...')
+    // console.log(data ,'This is from parent...')
     const [taskProgress, taskName] = data
     this.todoData = this.todoData.map((item) => {
       if(item.taskName === taskName){

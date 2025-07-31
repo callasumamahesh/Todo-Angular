@@ -11,7 +11,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FiltertaskPipe implements PipeTransform {
 
   transform(value:  taskInfo[], progressType: string): taskInfo[] {
-    console.log(value, progressType, 'this is data from filtertask...')
+    // console.log(value, progressType, 'this is data from filtertask...')
     const filteredValue = value.filter((item) => item.taskProgress.toLowerCase() === progressType.toLowerCase())
     return filteredValue;
   }
