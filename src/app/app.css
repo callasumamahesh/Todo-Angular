@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+        align-items: center;
+}
+
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.task-input{
+    padding: 10px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.head-section{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.task-progress{
+    padding: 10px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.submit-button{
+    background-color: green;
+    color: white;
+    border-radius: 4px;
+    min-width: 100px;
+    cursor: pointer;
+    padding: 10px;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.error{
+    color: red;
+}
+.progress-section{
+    width: 75%;
+    background-color: rgb(230, 227, 227);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 120px;
+    padding: 30px 0px;
+}

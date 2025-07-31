@@ -1,0 +1,15 @@
+
+<div class="single-progress">
+    <p class="progress-title">{{progressType}}</p>
+    <div class="all-tasks">
+        <div *ngFor="let singleData of completeTodoData | filtertask:progressType" class="single-task">
+            <p class="taskname">{{singleData.taskName}}</p>
+            <div class="buttons-div">
+                <div *ngFor="let item of progressData | filtertaskprogress:progressType ">
+                    <button class="btn" (click)="ChangeProgress(item,singleData.taskName)">{{item}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
